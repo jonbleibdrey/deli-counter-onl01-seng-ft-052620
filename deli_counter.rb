@@ -1,14 +1,25 @@
-katz_deli = []
-
-def line (array)
-  if katz_deli.length==0
-   puts "The line is currently empty."
-  # elsif
-  # return_string="The line is currently: " 
-  # counter=1
-  # katz_deli.each do |x|
-  #   return_string=return_string.concat(x)
-   
-  # #puts katz_deli.length+1
+def line(array)
+  array.map!.with_index(1) do |name, index|
+    "#{index}.#{name}"
+end
+  
+  if array.length>0
+    puts "The line is currently:#{array.join(" ")}"
+  else 
+    puts "The line is currently empty."
   end
 end
+
+def take_a_number(array,name)
+  array<< name
+  puts"welcome#{name}.You are number #{array.length} in line."
+end
+
+def now_serving(array)
+  if array.length>0
+    puts"currently serving#{array.shift}." 
+  else
+    puts"there is nobody waiting to be served!"
+  end
+end
+
