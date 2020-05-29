@@ -1,6 +1,6 @@
 def line(array)
   array.map!.with_index(1) do |name, index|
-    "#{index}. #{name}"
+    "#{index}.#{name}"
 end
   
   if array.length>0
