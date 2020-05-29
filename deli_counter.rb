@@ -2,7 +2,6 @@ def line(array)
   array.map!.with_index(1) do |name, index|
     "#{index}. #{name}"
   end
-end
   
   if array.length>0
     puts "The line is currently: #{array.join(" ")}"
